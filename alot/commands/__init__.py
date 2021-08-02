@@ -63,6 +63,7 @@ def lookup_command(cmdname, mode):
     :rtype: (:class:`Command`, :class:`~argparse.ArgumentParser`,
             dict(str->dict))
     """
+    print(COMMANDS)
     if cmdname in COMMANDS[mode]:
         return COMMANDS[mode][cmdname]
     elif cmdname in COMMANDS['global']:
