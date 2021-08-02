@@ -168,7 +168,6 @@ class UI:
         to trigger custom commands as defined in our keybindings.
         """
         logging.debug("Got key (%s, %s)", keys, raw)
-        import pdb; pdb.set_trace()
         # work around: escape triggers this twice, with keys = raw = []
         # the first time..
         if not keys:

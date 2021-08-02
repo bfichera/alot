@@ -63,7 +63,8 @@ def lookup_command(cmdname, mode):
     :rtype: (:class:`Command`, :class:`~argparse.ArgumentParser`,
             dict(str->dict))
     """
-    print(COMMANDS)
+    with open('/home/bfichera/helloalot.txt', 'w') as fh:
+        fh.write(repr(COMMANDS))
     if cmdname in COMMANDS[mode]:
         return COMMANDS[mode][cmdname]
     elif cmdname in COMMANDS['global']:
